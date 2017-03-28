@@ -7,6 +7,9 @@ fix.aov <- aov(temps ~ tractament + home)
 (ac <- anova2cross(fix.aov, random="home"))
 
 # Components de la variància
+
+
+# Provant
 mm <- matrix(c(1,1,ac["tractament","Df"]+1,0), ncol=2)
 solve(mm,ac[-1,"Mean Sq"])
 
